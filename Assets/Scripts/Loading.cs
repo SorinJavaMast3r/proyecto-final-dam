@@ -17,7 +17,7 @@ public class Loading : MonoBehaviour
     
     void Update()
     {
-        if (videoPlayer.frame == (long) videoPlayer.frameCount)
+        if ((videoPlayer.frame) > 0 && (videoPlayer.isPlaying == false))
         {
             SceneManager.LoadScene("MainMenu");
         }
