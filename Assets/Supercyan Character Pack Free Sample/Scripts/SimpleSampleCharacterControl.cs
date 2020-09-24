@@ -48,6 +48,9 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     
     private List<Collider> m_collisions = new List<Collider>();
 
+    public GameObject camera;
+    public GameObject posicionCam;
+
     void Awake()
     {
         if(!m_animator) { gameObject.GetComponent<Animator>(); }
@@ -148,7 +151,12 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
         transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
+
+        posicionCam.transform.SetParent(null);
+
         transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
+
+        posicionCam.transform.SetParent(transform);
 
         m_animator.SetFloat("MoveSpeed", m_currentV);
 
@@ -181,11 +189,18 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         {
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
+            posicionCam.transform.SetParent(null);
+
             transform.rotation = Quaternion.LookRotation(m_currentDirection);
+
+            posicionCam.transform.SetParent(transform);
+
             transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
             m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }
+
+        camera.transform.position = Vector3.Lerp(camera.transform.position, posicionCam.transform.position, 1.0f);
 
         JumpingAndLanding();
     }
