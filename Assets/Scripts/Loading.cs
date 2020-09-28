@@ -8,6 +8,7 @@ public class Loading : MonoBehaviour
 {
 
     VideoPlayer videoPlayer;
+    public string escenaACargar;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class Loading : MonoBehaviour
     {
         if ((videoPlayer.frame) > 0 && (videoPlayer.isPlaying == false))
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(escenaACargar);
         }
     }
 }
