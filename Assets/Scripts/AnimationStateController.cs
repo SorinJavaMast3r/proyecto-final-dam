@@ -5,10 +5,15 @@ using UnityEngine;
 public class AnimationStateController : MonoBehaviour
 {
 
-    Animator animator;
+    private Animator animator;
     int estaMoviendoHash;
     int estaCorriendoHash;
     int saltarHash;
+    public float velocidadMovimiento = 5.0f;
+    private float current_x = 0, current_y = 0, interpolacion = 10;
+    private Vector3 direccionActual = Vector3.zero;
+    public GameObject posCam;
+    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +30,6 @@ public class AnimationStateController : MonoBehaviour
         bool estaMoviendo = animator.GetBool(estaMoviendoHash);
         bool correrPulsado = Input.GetKey("left shift");
         bool estaCorriendo = animator.GetBool(estaCorriendoHash);
-        bool pulsarSaltar = Input.GetKey("space");
 
         if (!estaMoviendo && pulsarBoton)
         {
@@ -46,5 +50,37 @@ public class AnimationStateController : MonoBehaviour
         {
             animator.SetBool(estaCorriendoHash, false);
         }
+    }
+
+    void FixedUpdate()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+
+        Transform camera = Camera.main.transform;
+
+        current_x = Mathf.Lerp(current_x, x, Time.deltaTime * interpolacion);
+        current_y = Mathf.Lerp(current_y, y, Time.deltaTime * interpolacion);
+
+        Vector3 direccion = camera.forward * current_y + camera.right * current_x;
+
+        float longitudDireccion = direccion.magnitude;
+        direccion.y = 0;
+        direccion = direccion.normalized * longitudDireccion;
+
+        if (direccion != Vector3.zero)
+        {
+            direccionActual = Vector3.Slerp(direccionActual, direccion, Time.deltaTime * interpolacion);
+
+            posCam.transform.SetParent(null);
+
+            transform.rotation = Quaternion.LookRotation(direccionActual);
+
+            posCam.transform.SetParent(transform);
+
+            transform.position += direccionActual * velocidadMovimiento * Time.deltaTime;
+        }
+
+        cam.transform.position = Vector3.Lerp(cam.transform.position, posCam.transform.position, 1.0f);
     }
 }
