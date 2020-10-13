@@ -561,6 +561,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fbfbee0f9885764383291c4c5e18668, type: 3}
+--- !u!1 &542682800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 542682801}
+  - component: {fileID: 542682802}
+  - component: {fileID: 542682803}
+  m_Layer: 0
+  m_Name: EmitorDeAccion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &542682801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542682800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.483, z: 0.558}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1867905637}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &542682802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542682800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d64d08b0adb38546b2ee52b1fd1db96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBall: {fileID: 11400000, guid: c735418a8bfabd542bc09106e781b0ea, type: 2}
+--- !u!114 &542682803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542682800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740c03991481b9c4ab7a5a1d8570673b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &560523496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2242,6 +2299,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
   m_PrefabInstance: {fileID: 1835185053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1867905637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6124423834562628924, guid: 04823c706f54e514c8810ca8103c33a6, type: 3}
+  m_PrefabInstance: {fileID: 132839737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1959679110
 PrefabInstance:
