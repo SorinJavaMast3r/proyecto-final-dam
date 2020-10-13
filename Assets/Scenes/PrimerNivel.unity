@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d64d08b0adb38546b2ee52b1fd1db96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyBall: {fileID: 11400000, guid: c735418a8bfabd542bc09106e781b0ea, type: 2}
+  energyBall: {fileID: 0}
 --- !u!114 &542682803
 MonoBehaviour:
   m_ObjectHideFlags: 0
