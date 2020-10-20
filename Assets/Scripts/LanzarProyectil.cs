@@ -8,6 +8,6 @@ public class LanzarProyectil : MonoBehaviour
     {
         Rigidbody proyectilDentroDelJuego = Instantiate(proyectil, transform.position, transform.rotation) as Rigidbody;
 
-        proyectilDentroDelJuego.AddForce(transform.forward * velocidad);
+        proyectilDentroDelJuego.AddForce(transform.forward * velocidad, ForceMode.Impulse);
     }
 }

@@ -1503,7 +1503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6013689213725472991}
   m_LocalRotation: {x: -0.5559943, y: 0.010256401, z: -0.0029833678, w: -0.8311176}
-  m_LocalPosition: {x: 0.3499999, y: 6.68, z: -2.1}
+  m_LocalPosition: {x: 0.3499999, y: 9, z: -3.2489414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6124423834562628924}
@@ -2088,6 +2088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5700989117247942968}
   - component: {fileID: 3017252376521238160}
+  - component: {fileID: 6812552231390173869}
   m_Layer: 0
   m_Name: SkillLauncher
   m_TagString: Untagged
@@ -2122,6 +2123,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBall: {fileID: 0}
+--- !u!114 &6812552231390173869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931302782275069679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740c03991481b9c4ab7a5a1d8570673b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7932953398194164543
 GameObject:
   m_ObjectHideFlags: 0
