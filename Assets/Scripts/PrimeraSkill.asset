@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PrimeraSkill
   m_EditorClassIdentifier: 
   nombreHabilidad: 
-  proyectil: {fileID: -2682645054370514604, guid: d24894ff4a5aae840a468a89b0009f52,
+  proyectil: {fileID: 7158200691823931227, guid: 889dd67908ff48640a817f0b0074814e,
     type: 3}
-  velocidad: 50
+  velocidad: 10

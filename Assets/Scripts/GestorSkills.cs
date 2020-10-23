@@ -5,7 +5,7 @@ using UnityEngine;
 public class GestorSkills : MonoBehaviour
 {
     private bool animationExit = false;
-    private float animationTime = 0.54f;
+    private float animationTime = 0.84f;
     private float animationStartTime;
     private Animator animator;
     private string keyPressed;
@@ -40,10 +40,21 @@ public class GestorSkills : MonoBehaviour
             keyPressed = "e";
 
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+
+            this.animator.Play("Third Magic Attack");
+            animationStartTime = Time.time + animationTime;
+            animationExit = true;
+            keyPressed = "r";
+
+        }
     }
 
     void FixedUpdate()
     {
+
         if (animationExit && Time.time > animationStartTime)
         {
             switch (keyPressed)
@@ -56,7 +67,12 @@ public class GestorSkills : MonoBehaviour
                     this.rayo.lanzarHabilidad(this.gameObject);
                     animationExit = false;
                     break;
+                case "r":
+                    
+                    animationExit = false;
+                    break;
             }
         }
     }
+
 }

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreHabilidad: 
   range: 10
+  efecto: {fileID: -6473870061077423455, guid: 0310b8628b5599c4295215fedba1a232, type: 3}

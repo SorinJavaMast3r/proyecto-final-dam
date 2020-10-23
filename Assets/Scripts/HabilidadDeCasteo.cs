@@ -1,15 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HabilidadDeCasteo : MonoBehaviour
 {
-    public void Cast (Ray ray, float range)
+
+    private Rigidbody efectoDentroDelJuego;
+
+    public void Cast (Ray ray, float range, Rigidbody efecto)
     {
         ray.origin = transform.position;
         ray.direction = transform.forward;
         Physics.Raycast(ray, range);
 
-        Debug.DrawRay(ray.origin, ray.direction * range, Color.green, 5);
+        efectoDentroDelJuego = Instantiate(efecto, transform.position, transform.rotation) as Rigidbody;
+
     }
+
+
 }
