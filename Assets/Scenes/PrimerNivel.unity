@@ -142,10 +142,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: dc3f89f7532628942bad1b927e57cf50,
         type: 2}
+    - target: {fileID: 3017252376521238160, guid: 04823c706f54e514c8810ca8103c33a6,
+        type: 3}
+      propertyPath: earthSmash
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c8cb3e842ded0047bc521efc01d8739,
+        type: 2}
     - target: {fileID: 5700989117247942968, guid: 04823c706f54e514c8810ca8103c33a6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.464
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 5700989117247942968, guid: 04823c706f54e514c8810ca8103c33a6,
         type: 3}
@@ -161,6 +167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700989117247942968, guid: 04823c706f54e514c8810ca8103c33a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6013689213552701417, guid: 04823c706f54e514c8810ca8103c33a6,
         type: 3}
@@ -245,6 +256,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 733e5d6ed3d360c42853b2a925f25e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &295369969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295369967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5ec5779d75e024791476162c0d67ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &805777687
@@ -398,11 +421,11 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270983081}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6183695, b: 0.63836515, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
