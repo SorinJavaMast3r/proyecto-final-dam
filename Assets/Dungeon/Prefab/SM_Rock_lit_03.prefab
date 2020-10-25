@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6350267491423507641}
   - component: {fileID: 2700937241660583567}
   - component: {fileID: 8522817615830618742}
-  - component: {fileID: -4303474622716517105}
+  - component: {fileID: 9149979995339794149}
   m_Layer: 0
   m_Name: SM_Rock_lit_03
   m_TagString: Untagged
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7961228876251965098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 120.08526, y: -1.0694435, z: 0.7050396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,6 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,8 +81,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &-4303474622716517105
-BoxCollider:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9149979995339794149
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6177349, y: 0.9987192, z: 1.6142471}
-  m_Center: {x: 0.023028672, y: -0.02529496, z: -0.0031757355}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 689603971587382452, guid: babf6f57fb2180345bab4d76cfcd3ccb, type: 3}

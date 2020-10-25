@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8567103426713837619}
   - component: {fileID: 846520126873295365}
   - component: {fileID: 6378215246914103036}
-  - component: {fileID: -1036341228920213608}
+  - component: {fileID: 6876474079868438856}
   m_Layer: 0
   m_Name: SM_RoofWin_01
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4665499372955996704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.00000044254188, y: -0.7071068, z: -0.70710677, w: 0.0000004425419}
+  m_LocalPosition: {x: 56.99526, y: -1.6040981, z: 2.4850397}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: -0.000015258789}
 --- !u!33 &846520126873295365
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56,6 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,8 +82,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &-1036341228920213608
-BoxCollider:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6876474079868438856
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,6 +93,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.000002, y: 2.33672, z: 3.2066386}
-  m_Center: {x: 0.00000095367426, y: 0.97229695, z: 1.6033192}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1111486822382351490, guid: 4c5e1156e5e52ef4cb6392067a238535, type: 3}
