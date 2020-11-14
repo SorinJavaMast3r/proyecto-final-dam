@@ -83,4 +83,5 @@ public class AnimationStateController : MonoBehaviour
 
         cam.transform.position = Vector3.Lerp(cam.transform.position, posCam.transform.position, 1.0f);
     }
+
 }

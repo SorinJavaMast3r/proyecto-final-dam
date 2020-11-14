@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class GestorSkills : MonoBehaviour
     private float animationStartTime;
     private Animator animator;
     private string keyPressed;
+    private float abilityTime;
 
     public Skill energyBall;
     public Skill rayo;
@@ -24,37 +26,41 @@ public class GestorSkills : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-
             this.animator.Play("First Magic Attack");
             animationStartTime = Time.time + animationTime;
             animationExit = true;
             keyPressed = "q";
-
+            transform.parent.GetComponent<AnimationStateController>().velocidadMovimiento = 0;
+            abilityTime = Time.time + 2.0f;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-
             this.animator.Play("Second Magic Attack");
             animationStartTime = Time.time + animationTime;
             animationExit = true;
             keyPressed = "e";
-
+            transform.parent.GetComponent<AnimationStateController>().velocidadMovimiento = 0;
+            abilityTime = Time.time + 3.5f;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-
             this.animator.Play("Third Magic Attack");
             animationStartTime = Time.time + animationTime;
             animationExit = true;
             keyPressed = "r";
-
+            transform.parent.GetComponent<AnimationStateController>().velocidadMovimiento = 0;
+            abilityTime = Time.time + 1.0f;
         }
     }
 
     void FixedUpdate()
     {
+        if(Time.time > abilityTime)
+        {
+            transform.parent.GetComponent<AnimationStateController>().velocidadMovimiento = 5.0f;
+        }
 
         if (animationExit && Time.time > animationStartTime)
         {
@@ -74,6 +80,8 @@ public class GestorSkills : MonoBehaviour
                     break;
             }
         }
+
+
     }
 
 }
